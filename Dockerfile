@@ -1,4 +1,4 @@
 FROM node:20-alpine
 WORKDIR /app
 EXPOSE 3000
-CMD ["sh", "-c", "npx safe-postgres-mcp --transport http --host 0.0.0.0 --port 3000"]
+CMD ["sh", "-c", "npx safe-postgres-mcp --transport http --host 0.0.0.0 --port 3000 \"$DATABASE_URL\""]
